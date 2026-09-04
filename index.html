@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prelim Milestone - Home</title>
+    <!-- Globals -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="App.css">
+    <!-- Page Specific -->
+    <link rel="stylesheet" href="CSS/Hero.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+</head>
+<body>
+
+    <!-- Add this directly under the <body> tag in all HTML files -->
+    <nav class="navbar floating-pill" id="navbar">
+        <div class="nav-container">
+            <!-- Ensure GA links to your new index.html -->
+            <a href="index.html" class="nav-logo">GA</a>
+
+            <ul class="nav-links" id="nav-links">
+                <!-- Point these to the correct physical files -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About & Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Keep the Let's Chat button pointing to the contact section on the projects page -->
+                <a href="projects.html#contact" class="btn-chat">Let's chat</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+<section class="hero-root">
+
+    <!-- Background: Blobs -->
+    <div class="blob blob-1 visible"></div>
+    <div class="blob blob-2 visible"></div>
+    <div class="blob blob-3 visible"></div>
+
+    <!-- Background: Noise + Decorative -->
+    <div class="grain"></div>
+    <div class="deco-line deco-line-1"></div>
+    <div class="deco-line deco-line-2"></div>
+    <div class="deco-line deco-line-3"></div>
+    <div class="corner-accent"></div>
+
+    <!-- Background: 3D Cube Field (static placeholder cubes) -->
+    <div class="cube-field">
+
+        <div class="cube-wrapper visible" style="left: 15%; top: 20%; transform: translate(-50%, -50%); z-index: 2; --cube-size: 48px; --cube-half: 24px; --cube-opacity: 0.6; --cube-blur: 0px; --cube-duration: 4s; --cube-delay: 0s; --cube-rot-x: 20; --cube-rot-y: 30; --cube-rot-z: 10; --cube-glow: 0.4;">
+            <div class="cube">
+                <div class="face face--front"><span class="face-label">JS</span></div>
+                <div class="face face--back"><span class="face-label">TS</span></div>
+                <div class="face face--left"><span class="face-label">PY</span></div>
+                <div class="face face--right"><span class="face-label">GO</span></div>
+                <div class="face face--top"><span class="face-label">RX</span></div>
+                <div class="face face--bottom"><span class="face-label">NX</span></div>
+            </div>
+        </div>
+
+        <div class="cube-wrapper visible" style="left: 75%; top: 60%; transform: translate(-50%, -50%); z-index: 3; --cube-size: 36px; --cube-half: 18px; --cube-opacity: 0.5; --cube-blur: 1px; --cube-duration: 5s; --cube-delay: 1s; --cube-rot-x: 15; --cube-rot-y: 45; --cube-rot-z: 5; --cube-glow: 0.3;">
+            <div class="cube">
+                <div class="face face--front"><span class="face-label">DB</span></div>
+                <div class="face face--back"><span class="face-label">SQ</span></div>
+                <div class="face face--left"><span class="face-label">PG</span></div>
+                <div class="face face--right"><span class="face-label">MG</span></div>
+                <div class="face face--top"><span class="face-label">RD</span></div>
+                <div class="face face--bottom"><span class="face-label">FR</span></div>
+            </div>
+        </div>
+
+        <div class="cube-wrapper visible" style="left: 50%; top: 80%; transform: translate(-50%, -50%); z-index: 2; --cube-size: 28px; --cube-half: 14px; --cube-opacity: 0.4; --cube-blur: 2px; --cube-duration: 6s; --cube-delay: 2s; --cube-rot-x: 10; --cube-rot-y: 20; --cube-rot-z: 0; --cube-glow: 0.2;">
+            <div class="cube">
+                <div class="face face--front"><span class="face-label">UI</span></div>
+                <div class="face face--back"><span class="face-label">UX</span></div>
+                <div class="face face--left"><span class="face-label">CS</span></div>
+                <div class="face face--right"><span class="face-label">AI</span></div>
+                <div class="face face--top"><span class="face-label">ML</span></div>
+                <div class="face face--bottom"><span class="face-label">DL</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main Hero Body -->
+    <div class="hero-body">
+
+        <!-- Left Column -->
+        <div class="hero-left text-front">
+
+            <div class="tag-line visible">
+                <div class="tag-dot"></div>
+                <span class="tag-text">Available for Opportunities</span>
+            </div>
+
+            <h1 class="hero-heading visible">
+                Hi, I'm<br />
+                <em>Greece A.</em><br />
+                CS Student.
+            </h1>
+
+            <p class="hero-sub visible">
+                Building scalable systems and intuitive web experiences — grounded in strong academics and real-world development across backend, UI/UX, and enterprise applications.
+            </p>
+
+            <div class="hero-actions visible">
+                <button
+                    class="btn-primary"
+                    onclick="const el = document.getElementById('ProjectsSection'); if (el) el.scrollIntoView({ behavior: 'smooth' });"
+                >
+                    View My Work
+                </button>
+                <a class="btn-ghost" href="https://www.linkedin.com/in/greece-ancog-712677287/?skipRedirect=true" target="_blank" rel="noopener noreferrer">Let's Connect</a>
+            </div>
+
+            <div class="hero-chips visible">
+                <span class="chip">Node.js</span>
+                <span class="chip">NestJS</span>
+                <span class="chip">Laravel</span>
+                <span class="chip">React</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">Prisma</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Python</span>
+                <span class="chip">Java</span>
+            </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="hero-right cards-behind visible">
+
+            <div class="mini-card mini-card-1">
+                <div class="mini-icon mini-icon-red">🏆</div>
+                <div>
+                    <span class="mini-label">Achievement</span>
+                    <span class="mini-value">President's Lister</span>
+                </div>
+            </div>
+
+            <div class="mini-card mini-card-2">
+                <div class="mini-icon mini-icon-gold">💼</div>
+                <div>
+                    <span class="mini-label">Current Role</span>
+                    <span class="mini-value">Back-End Developer, SYSDEV</span>
+                </div>
+            </div>
+
+            <div class="mini-card mini-card-3">
+                <div class="mini-icon mini-icon-rose">🎓</div>
+                <div>
+                    <span class="mini-label">Scholarship</span>
+                    <span class="mini-value">DOST &amp; GIA Scholar</span>
+                </div>
+            </div>
+
+            <div class="avatar-card">
+                <div class="avatar-img">
+                    <img
+                        src="assets/GreecePic_1.jpg"
+                        alt="Greece Ancog"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"
+                    />
+                </div>
+                <div class="avatar-name">Greece A.</div>
+                <div class="avatar-role">Computer Science Student</div>
+                <div class="avatar-stats">
+                    <div class="stat">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <span class="stat-num">∞</span>
+                        <span class="stat-label">Ideas</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Globals -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="App.css">
+    <!-- Page Specific -->
+    <link rel="stylesheet" href="CSS/AboutMe.css">
+    <link rel="stylesheet" href="CSS/Experience.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+</head>
+<body>
+
+<!-- ===================== ABOUT ME SECTION ===================== -->
+<section class="aboutme-section" aria-labelledby="aboutme-title">
+
+    <!-- Decorative blobs -->
+    <div class="am-decor am-decor--blob1" aria-hidden="true"></div>
+    <div class="am-decor am-decor--blob2" aria-hidden="true"></div>
+    <div class="am-decor am-decor--blob3" aria-hidden="true"></div>
+
+    <!-- Static sparkles (was generated dynamically from sparkles array) -->
+    <span class="am-sparkle" aria-hidden="true">✦</span>
+    <span class="am-sparkle" aria-hidden="true">✧</span>
+    <span class="am-sparkle" aria-hidden="true">✦</span>
+
+    <header class="aboutme-header">
+        <span class="aboutme-eyebrow">My Story</span>
+        <h2 id="aboutme-title" class="aboutme-title">
+            About <em>Me</em>
+            <span class="aboutme-title-underline" aria-hidden="true"></span>
+        </h2>
+    </header>
+
+    <div class="aboutme-timeline">
+
+        <!-- Present Block -->
+        <div class="story-block story-block--left" data-label="Present">
+            <div class="story-visual">
+                <div class="blob-frame blob-frame--present" tabindex="0" aria-label="Greece's photo">
+                    <div class="blob-frame__inner">
+                        <img
+                            src="assets/GreecePic_3.jpg"
+                            alt="Greece Ancog"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+                        />
+                    </div>
+                </div>
+                <div class="chips-row" role="list" aria-label="Mindset and strengths">
+                    <span class="chip" role="listitem">Problem Solver</span>
+                    <span class="chip" role="listitem">Team Player</span>
+                    <span class="chip" role="listitem">Fast Learner</span>
+                    <span class="chip" role="listitem">Detail-Oriented</span>
+                    <span class="chip" role="listitem">Creative Thinker</span>
+                </div>
+            </div>
+            <div class="story-text">
+                <div class="story-era">
+                    <span class="story-era__dot" aria-hidden="true"></span>
+                    <span class="story-era__label">Present</span>
+                </div>
+                <h3 class="story-heading">Hi, I'm <em>Greece Ancog.</em></h3>
+                <p class="story-body">
+                    I'm a Third-Year Computer Science student at <strong>Ateneo de Davao University,</strong> balancing academics with active student leadership. As the Syntax Head for CSSEC and a Backend developer for SAMAHAN SysDev, my daily routine involves architecting robust APIs and
+                    fostering technical growth within my university community.
+                </p>
+                <ul class="story-list">
+                    <li>Building enterprise-grade systems with NestJS, Prisma, and Laravel.</li>
+                    <li>Exploring the intersection of AI and thoughtful design.</li>
+                    <li>Always curious, always learning, and always building.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Past Block -->
+        <div class="story-block story-block--right" data-label="Origin">
+            <div class="story-visual">
+                <div class="blob-frame blob-frame--past" tabindex="0">
+                    <div class="blob-frame__inner">
+                        <img
+                            src="assets/GreecePic_4.png"
+                            alt="Greece Ancog"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="story-text">
+                <div class="story-era">
+                    <span class="story-era__dot" aria-hidden="true"></span>
+                    <span class="story-era__label">How it started</span>
+                </div>
+                <h3 class="story-heading">The <em>spark</em> that started it all</h3>
+                <blockquote class="story-quote">
+                    "I walked into college without writing a single line of code, but the moment I started building, I knew exactly that I was in the right Path."
+                </blockquote>
+                <p class="story-body">
+                    Starting with zero programming experience, I built my foundation piece by piece. I fell in love with the entire process—from encouters with errors to architecting complex systems from the ground up. Designing logic was a long process.
+                </p>
+            </div>
+        </div>
+
+        <!-- Future Block -->
+        <div class="story-block story-block--left" data-label="Vision">
+            <div class="story-visual">
+                <div class="blob-frame blob-frame--future" tabindex="0">
+                    <div class="blob-frame__sparkles" aria-hidden="true">
+                        <span>✦</span><span>✧</span><span>✦</span>
+                    </div>
+                    <div class="blob-frame__inner">
+                        <img
+                            src="assets/GreecePic_5.png"
+                            alt="Greece Ancog"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="story-text">
+                <div class="story-era">
+                    <span class="story-era__dot" aria-hidden="true"></span>
+                    <span class="story-era__label">Looking forward</span>
+                </div>
+                <h3 class="story-heading">Building things that <em>matter</em></h3>
+                <p class="story-body">
+                    I want to build systems that balance robust backend architecture with human-centered design. Moving forward, I am driven to tackle localized, real-world problems, creating technology that makes everyday processes simpler, more efficient, and genuinely meaningful.
+                </p>
+                <ul class="story-list">
+                    <li>Gain real-world experience through an internship and projects where I can contribute and continue learning.</li>
+                    <li>Deepen my expertise in full-stack development and applied AI for local challenges, like computer vision in agriculture.</li>
+                    <li>Build open-source and community projects that are not just finished, but actively used to solve real problems.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div><!-- /.aboutme-timeline -->
+
+    <div class="aboutme-cta">
+        <span class="aboutme-cta-label">Curious about my work?</span>
+        <button
+            class="aboutme-btn"
+            aria-label="See my projects"
+            onclick="const el = document.getElementById('ProjectsSection'); if (el) el.scrollIntoView({ behavior: 'smooth' });"
+        >
+            See my projects
+            <span class="aboutme-btn__arrow" aria-hidden="true">→</span>
+        </button>
+    </div>
+
+</section><!-- /.aboutme-section -->
+
+
+<!-- ===================== EXPERIENCE SECTION ===================== -->
+<section class="exp-section" id="ExperienceSection">
+
+    <!-- Scalloped top border -->
+    <div class="exp-scallop exp-scallop--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0,60 C40,20 80,60 120,60 C160,60 200,20 240,60 C280,60 320,20 360,60 C400,60 440,20 480,60 C520,60 560,20 600,60 C640,60 680,20 720,60 C760,60 800,20 840,60 C880,60 920,20 960,60 C1000,60 1040,20 1080,60 C1120,60 1160,20 1200,60 C1240,60 1280,20 1320,60 C1360,60 1400,20 1440,60 L1440,0 L0,0 Z"
+                fill="#FCF9F9"
+            />
+        </svg>
+    </div>
+
+    <div class="exp-inner">
+
+        <!-- Section header -->
+        <div class="exp-header">
+            <span class="exp-header__eyebrow">What I've Done</span>
+            <h2 class="exp-header__title">
+                Experience<span class="exp-header__dot">.</span>
+            </h2>
+            <p class="exp-header__sub">Roles, responsibilities, and the tools behind the work.</p>
+        </div>
+
+        <!-- Cards grid (static — was generated from experiences array via useExperience hook) -->
+        <div class="exp-grid">
+
+            <article class="exp-card exp-card--purple slide-up" style="--delay: 0s;">
+                <div class="exp-card__badge" aria-label="Entry number 1">
+                    <div class="exp-badge__diamond">
+                        <span class="exp-badge__num">1</span>
+                    </div>
+                </div>
+                <div class="exp-card__tab">
+                    <span class="exp-card__type">Part-Time</span>
+                </div>
+                <div class="exp-card__body">
+                    <h3 class="exp-card__role">Back-End Developer</h3>
+                    <p class="exp-card__company">SAMAHAN Systems Development (SYSDEV)</p>
+                    <p class="exp-card__dates">Aug 2024 — Present</p>
+                    <ul class="exp-card__bullets">
+                        <li class="exp-bullet">
+                            <span class="exp-bullet__label">Role</span>
+                            <span class="exp-bullet__text">Architect and maintain NestJS APIs powering SAMAHAN's student services platform.</span>
+                        </li>
+                        <li class="exp-bullet">
+                            <span class="exp-bullet__label">Impact</span>
+                            <span class="exp-bullet__text">Improved API response time by 40% through query optimization and caching strategies.</span>
+                        </li>
+                        <li class="exp-bullet exp-bullet--tools">
+                            <span class="exp-bullet__label">Tools</span>
+                            <span class="exp-bullet__text">NestJS · Prisma · PostgreSQL · Docker · GitHub Actions</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="exp-card exp-card--blue slide-up" style="--delay: 0.15s;">
+                <div class="exp-card__badge" aria-label="Entry number 2">
+                    <div class="exp-badge__diamond">
+                        <span class="exp-badge__num">2</span>
+                    </div>
+                </div>
+                <div class="exp-card__tab">
+                    <span class="exp-card__type">Leadership</span>
+                </div>
+                <div class="exp-card__body">
+                    <h3 class="exp-card__role">Syntax Head</h3>
+                    <p class="exp-card__company">CSSEC — Computer Science Society</p>
+                    <p class="exp-card__dates">Jun 2024 — Present</p>
+                    <ul class="exp-card__bullets">
+                        <li class="exp-bullet">
+                            <span class="exp-bullet__label">Role</span>
+                            <span class="exp-bullet__text">Lead technical workshops and mentoring sessions for junior CS students.</span>
+                        </li>
+                        <li class="exp-bullet">
+                            <span class="exp-bullet__label">Impact</span>
+                            <span class="exp-bullet__text">Organized 8+ coding events growing department technical community engagement.</span>
+                        </li>
+                        <li class="exp-bullet exp-bullet--tools">
+                            <span class="exp-bullet__label">Tools</span>
+                            <span class="exp-bullet__text">Node.js · React · Figma · Notion</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="exp-card exp-card--green slide-up" style="--delay: 0.3s;">
+                <div class="exp-card__badge" aria-label="Entry number 3">
+                    <div class="exp-badge__diamond">
+                        <span class="exp-badge__num">3</span>
+                    </div>
+                </div>
+                <div class="exp-card__tab">
+                    <span class="exp-card__type">Freelance</span>
+                </div>
+                <div class="exp-card__body">
+                    <h3 class="exp-card__role">Full-Stack Developer</h3>
+                    <p class="exp-card__company">Independent Projects</p>
+                    <p class="exp-card__dates">2023 — Present</p>
+                    <ul class="exp-card__bullets">
+                        <li class="exp-bullet">
+                            <span class="exp-bullet__label">Role</span>
+                            <span class="exp-bullet__text">Design and build end-to-end web applications for clients and personal projects.</span>
+                        </li>
+                        <li class="exp-bullet">
+                            <span class="exp-bullet__label">Impact</span>
+                            <span class="exp-bullet__text">Delivered 15+ projects spanning e-commerce, dashboards, and automation tools.</span>
+                        </li>
+                        <li class="exp-bullet exp-bullet--tools">
+                            <span class="exp-bullet__label">Tools</span>
+                            <span class="exp-bullet__text">Laravel · Next.js · MySQL · Tailwind CSS · Vercel</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+        </div><!-- /.exp-grid -->
+
+    </div><!-- /.exp-inner -->
+
+    <!-- Scalloped bottom border -->
+    <div class="exp-scallop exp-scallop--bottom" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0,0 C40,40 80,0 120,0 C160,0 200,40 240,0 C280,0 320,40 360,0 C400,0 440,40 480,0 C520,0 560,40 600,0 C640,0 680,40 720,0 C760,0 800,40 840,0 C880,0 920,40 960,0 C1000,0 1040,40 1080,0 C1120,0 1160,40 1200,0 C1240,0 1280,40 1320,0 C1360,0 1400,40 1440,0 L1440,60 L0,60 Z"
+                fill="#FCF9F9"
+            />
+        </svg>
+    </div>
+
+</section><!-- /.exp-section -->
+
+</body>
+</html>
