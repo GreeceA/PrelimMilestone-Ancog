@@ -4,52 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prelim Milestone - Home</title>
-    <!-- Globals -->
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="App.css">
-    <!-- Page Specific -->
-    <link rel="stylesheet" href="CSS/Hero.css">
-    <link rel="stylesheet" href="CSS/Footer.css">
+    
+    <link rel="stylesheet" href="index-style.css">
 </head>
 <body>
 
-    <!-- Add this directly under the <body> tag in all HTML files -->
-    <nav class="navbar floating-pill" id="navbar">
-        <div class="nav-container">
-            <!-- Ensure GA links to your new index.html -->
-            <a href="index.html" class="nav-logo">GA</a>
+<nav class="navbar floating-pill" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">GA</a>
 
-            <ul class="nav-links" id="nav-links">
-                <!-- Point these to the correct physical files -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About & Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
 
-            <div class="nav-actions">
-                <!-- Keep the Let's Chat button pointing to the contact section on the projects page -->
-                <a href="projects.html#contact" class="btn-chat">Let's chat</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+        <div class="nav-actions">
+            <a href="projects.html#contact" class="btn-chat">Let's chat</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </nav>
+    </div>
+</nav>
+
 <section class="hero-root">
 
-    <!-- Background: Blobs -->
     <div class="blob blob-1 visible"></div>
     <div class="blob blob-2 visible"></div>
     <div class="blob blob-3 visible"></div>
 
-    <!-- Background: Noise + Decorative -->
     <div class="grain"></div>
     <div class="deco-line deco-line-1"></div>
     <div class="deco-line deco-line-2"></div>
     <div class="deco-line deco-line-3"></div>
     <div class="corner-accent"></div>
 
-    <!-- Background: 3D Cube Field (static placeholder cubes) -->
     <div class="cube-field">
 
         <div class="cube-wrapper visible" style="left: 15%; top: 20%; transform: translate(-50%, -50%); z-index: 2; --cube-size: 48px; --cube-half: 24px; --cube-opacity: 0.6; --cube-blur: 0px; --cube-duration: 4s; --cube-delay: 0s; --cube-rot-x: 20; --cube-rot-y: 30; --cube-rot-z: 10; --cube-glow: 0.4;">

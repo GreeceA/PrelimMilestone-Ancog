@@ -1,527 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Globals -->
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="App.css">
-    <!-- Page Specific -->
-    <link rel="stylesheet" href="CSS/Projects.css">
-    <link rel="stylesheet" href="CSS/Contact.css">
-    <link rel="stylesheet" href="CSS/Footer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Greece Ancog</title>
+    <link rel="stylesheet" href="projects-style.css">
 </head>
 <body>
 
-<!-- ===================== PROJECTS SECTION ===================== -->
-<section class="proj-section" id="ProjectsSection">
+<nav class="navbar floating-pill" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">GA</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#contact" class="btn-chat">Let's chat</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
 
-    <!-- Floating decorative objects (was generated from FLOATERS array) -->
-    <div class="floater floater-1" aria-hidden="true">
-        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="2" width="38" height="38" rx="4" transform="rotate(45 30 30)"
-                fill="var(--color-accent)" fill-opacity="0.22" stroke="var(--color-accent)" stroke-width="2.5" />
-        </svg>
-    </div>
-    <div class="floater floater-2" aria-hidden="true">
-        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="30" cy="30" r="22" stroke="var(--color-primary)" stroke-width="7" fill="none" opacity="0.18" />
-            <circle cx="30" cy="30" r="12" stroke="var(--color-accent)" stroke-width="3" fill="none" opacity="0.35" />
-        </svg>
-    </div>
-    <div class="floater floater-3" aria-hidden="true">
-        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="40" height="40" rx="6" fill="var(--color-primary)"
-                fill-opacity="0.13" stroke="var(--color-primary)" stroke-width="2.5" stroke-dasharray="6 4" />
-        </svg>
-    </div>
-    <div class="floater floater-4" aria-hidden="true">
-        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="30,4 36,22 55,22 40,34 46,52 30,40 14,52 20,34 5,22 24,22"
-                fill="var(--color-accent)" fill-opacity="0.28" stroke="var(--color-accent)" stroke-width="2" />
-        </svg>
-    </div>
-    <div class="floater floater-5" aria-hidden="true">
-        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="30" cy="30" r="25" fill="var(--color-surface)" stroke="var(--color-primary)"
-                stroke-width="2.5" stroke-dasharray="4 3" opacity="0.55" />
-        </svg>
-    </div>
-
-    <!-- Header -->
+<main class="proj-section" id="ProjectsSection">
     <div class="proj-header">
-        <span class="proj-eyebrow">Featured Builds</span>
-        <h2 class="proj-title">
-            Projects<span class="proj-accent">.</span>
-        </h2>
-        <p class="proj-subtitle">
-            Systems developed for academic capstones, student organizations, and independent exploration.
-        </p>
+        <span class="proj-eyebrow">GitHub Repositories</span>
+        <h2 class="proj-title">Projects<span class="proj-accent">.</span></h2>
+        <p class="proj-subtitle">Live data fetched directly from the GitHub REST API.</p>
     </div>
 
-    <!-- Carousel (static — was driven by PROJECTS data array + useProjects hook) -->
-    <div
-        class="proj-carousel"
-        role="region"
-        aria-label="Projects carousel"
-        id="proj-carousel"
-    >
-
-        <!-- Card 1 — Center / Active -->
-        <article
-            class="proj-card proj-card--center"
-            style="--pos: 0;"
-            tabindex="0"
-        >
-            <div class="proj-badge" aria-label="Featured project">★ Featured</div>
-
-            <div class="proj-card__img-wrap">
-                <img
-                    src="assets/projects/samahan-api.jpg"
-                    alt="SAMAHAN API preview"
-                    class="proj-card__img"
-                    draggable="false"
-                />
-                <div class="proj-card__shine" aria-hidden="true"></div>
-            </div>
-
-            <div class="proj-card__content">
-                <h3 class="proj-card__title">SAMAHAN API</h3>
-                <p class="proj-card__desc">A production-grade NestJS REST API powering SAMAHAN's student services platform, featuring JWT auth, role-based access control, and automated CI/CD pipelines.</p>
-
-                <ul class="proj-pills" aria-label="Tech stack">
-                    <li class="proj-pill">NestJS</li>
-                    <li class="proj-pill">Prisma</li>
-                    <li class="proj-pill">PostgreSQL</li>
-                    <li class="proj-pill">Docker</li>
-                    <li class="proj-pill">GitHub Actions</li>
-                </ul>
-
-                <div class="proj-card__actions">
-                    <a
-                        href="https://github.com/GreeceA/samahan-api"
-                        class="proj-btn proj-btn--ghost"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        tabindex="0"
-                    >
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Card 2 — Right adjacent -->
-        <article
-            class="proj-card proj-card--adjacent proj-card--right"
-            style="--pos: 1;"
-            tabindex="-1"
-            onclick="activateCard(this, 1)"
-        >
-            <div class="proj-card__img-wrap">
-                <img
-                    src="assets/projects/portfolio.jpg"
-                    alt="Portfolio preview"
-                    class="proj-card__img"
-                    draggable="false"
-                />
-                <div class="proj-card__shine" aria-hidden="true"></div>
-            </div>
-
-            <div class="proj-card__content">
-                <h3 class="proj-card__title">Personal Portfolio</h3>
-                <p class="proj-card__desc">A dynamic, React-based portfolio showcasing projects, experience, and a custom contact form — built with performance and accessibility in mind.</p>
-
-                <ul class="proj-pills" aria-label="Tech stack">
-                    <li class="proj-pill">React</li>
-                    <li class="proj-pill">TypeScript</li>
-                    <li class="proj-pill">CSS Modules</li>
-                    <li class="proj-pill">Vite</li>
-                </ul>
-
-                <div class="proj-card__actions">
-                    <a
-                        href="https://github.com/GreeceA/portfolio"
-                        class="proj-btn proj-btn--ghost"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        tabindex="-1"
-                    >
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Card 3 — Left adjacent -->
-        <article
-            class="proj-card proj-card--adjacent proj-card--left"
-            style="--pos: -1;"
-            tabindex="-1"
-            onclick="activateCard(this, -1)"
-        >
-            <div class="proj-card__img-wrap">
-                <img
-                    src="assets/projects/inventory.jpg"
-                    alt="Inventory System preview"
-                    class="proj-card__img"
-                    draggable="false"
-                />
-                <div class="proj-card__shine" aria-hidden="true"></div>
-            </div>
-
-            <div class="proj-card__content">
-                <h3 class="proj-card__title">Inventory System</h3>
-                <p class="proj-card__desc">A full-stack Laravel inventory management system with barcode scanning, real-time stock alerts, and detailed analytics dashboards for a local business.</p>
-
-                <ul class="proj-pills" aria-label="Tech stack">
-                    <li class="proj-pill">Laravel</li>
-                    <li class="proj-pill">MySQL</li>
-                    <li class="proj-pill">Blade</li>
-                    <li class="proj-pill">Chart.js</li>
-                </ul>
-
-                <div class="proj-card__actions">
-                    <a
-                        href="https://github.com/GreeceA/inventory-system"
-                        class="proj-btn proj-btn--ghost"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        tabindex="-1"
-                    >
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- Card 4 — Hidden right -->
-        <article
-            class="proj-card proj-card--hidden proj-card--right"
-            style="--pos: 2;"
-            tabindex="-1"
-            aria-hidden="true"
-        >
-            <div class="proj-card__img-wrap">
-                <img
-                    src="assets/projects/ai-vision.jpg"
-                    alt="AI Vision preview"
-                    class="proj-card__img"
-                    draggable="false"
-                />
-                <div class="proj-card__shine" aria-hidden="true"></div>
-            </div>
-
-            <div class="proj-card__content">
-                <h3 class="proj-card__title">AgriVision AI</h3>
-                <p class="proj-card__desc">A computer vision proof-of-concept for crop disease detection in Mindanao's agriculture sector, using Python and transfer learning on a custom dataset.</p>
-
-                <ul class="proj-pills" aria-label="Tech stack">
-                    <li class="proj-pill">Python</li>
-                    <li class="proj-pill">PyTorch</li>
-                    <li class="proj-pill">OpenCV</li>
-                    <li class="proj-pill">FastAPI</li>
-                </ul>
-
-                <div class="proj-card__actions">
-                    <a
-                        href="https://github.com/GreeceA/agrivision"
-                        class="proj-btn proj-btn--ghost"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        tabindex="-1"
-                    >
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </article>
-
-    </div><!-- /.proj-carousel -->
-
-    <!-- Controls -->
-    <div class="proj-controls">
-        <button
-            class="proj-arrow proj-arrow--prev"
-            onclick="rotateCarousel(-1)"
-            aria-label="Previous project"
-        >
-            ←
-        </button>
-
-        <!-- Dot indicators -->
-        <div class="proj-dots" role="tablist">
-            <button class="proj-dot proj-dot--active" role="tab" aria-selected="true"  aria-label="Go to project 1"></button>
-            <button class="proj-dot"                  role="tab" aria-selected="false" aria-label="Go to project 2" onclick="goToProject(1)"></button>
-            <button class="proj-dot"                  role="tab" aria-selected="false" aria-label="Go to project 3" onclick="goToProject(2)"></button>
-            <button class="proj-dot"                  role="tab" aria-selected="false" aria-label="Go to project 4" onclick="goToProject(3)"></button>
-        </div>
-
-        <button
-            class="proj-arrow proj-arrow--next"
-            onclick="rotateCarousel(1)"
-            aria-label="Next project"
-        >
-            →
-        </button>
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <input type="text" id="search-bar" placeholder="Search projects by name..." aria-label="Search projects">
     </div>
 
-</section><!-- /.proj-section -->
+    <div id="loading" class="proj-message">Fetching repositories from GitHub...</div>
+    <div id="error-message" class="proj-message" style="color: #ff6b6b; display: none;"></div>
 
+    <div id="gallery" class="proj-grid"></div>
+</main>
 
-<!-- ===================== CONTACT SECTION ===================== -->
 <section class="Contact" id="contact">
-
-    <!-- Grid overlay -->
-    <div class="Contact__grid" aria-hidden="true"></div>
-
-    <!-- Decorative corner doodles -->
-    <span class="Contact__deco Contact__deco--tl" aria-hidden="true">✦</span>
-    <span class="Contact__deco Contact__deco--tr" aria-hidden="true">✦</span>
-
-    <!-- Top Marquee -->
-    <div class="Contact__marquee-wrap Contact__marquee-wrap--top" aria-label="Scrolling banner">
-        <div class="Contact__marquee">
-            <span>— LET'S WORK TOGETHER — OPEN TO OPPORTUNITIES — BACKEND · FULLSTACK · UI/UX — </span>
-            <span aria-hidden="true">— LET'S WORK TOGETHER — OPEN TO OPPORTUNITIES — BACKEND · FULLSTACK · UI/UX — </span>
-        </div>
-    </div>
-
-    <div class="Contact__eyebrow">
-        <span><span class="Contact__eyebrow-dash">—</span> get in touch <span class="Contact__eyebrow-dash">—</span></span>
-    </div>
-
     <div class="Contact__postcard-outer">
         <div class="Contact__postcard">
-
-            <!-- Stamp -->
-            <div class="Contact__stamp" aria-hidden="true">
-                <div class="Contact__stamp-inner">
-                    <span>✉️</span>
-                    <span class="Contact__stamp-label">PORT<br>FOLIO</span>
-                </div>
-            </div>
-
-            <!-- Postmark -->
-            <div class="Contact__postmark" aria-hidden="true">
-                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" />
-                    <circle cx="40" cy="40" r="26" stroke="currentColor" stroke-width="1" />
-                    <text x="50%" y="38%" dominant-baseline="middle" text-anchor="middle" font-size="7" fill="currentColor" font-family="serif" letter-spacing="1">SENT</text>
-                    <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-size="6" fill="currentColor" font-family="serif">2025</text>
-                </svg>
-            </div>
-
-            <!-- Left panel -->
             <div class="Contact__left">
-                <p class="Contact__greeting">Dear Visitor,</p>
                 <h2 class="Contact__heading">Let's build something great.</h2>
-                <p class="Contact__body">
-                    I'm open to internships, collaborations, and new opportunities.
-                    Feel free to reach out — I'd love to hear what you're building!
-                </p>
-
+                <p class="Contact__body">I'm open to internships, collaborations, and new opportunities.</p>
                 <div class="Contact__email-row">
-                    <a href="mailto:greeceancog@gmail.com" class="Contact__email-link">
-                        greeceancog@gmail.com
-                    </a>
-                    <button
-                        class="Contact__copy-btn"
-                        onclick="navigator.clipboard.writeText('greeceancog@gmail.com').then(() => { this.textContent = 'Copied! ✓'; this.classList.add('Contact__copy-btn--copied'); setTimeout(() => { this.textContent = 'Copy'; this.classList.remove('Contact__copy-btn--copied'); }, 2000); });"
-                        aria-label="Copy email address"
-                    >
-                        Copy
-                    </button>
+                    <a href="mailto:greeceancog@gmail.com" class="Contact__email-link">greeceancog@gmail.com</a>
                 </div>
-
-                <div class="Contact__socials">
-                    <a
-                        href="https://www.linkedin.com/in/greece-ancog-712677287/?skipRedirect=true"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="Contact__social-btn"
-                    >
-                        🔗 LinkedIn
-                    </a>
-                    <a
-                        href="https://github.com/GreeceA"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="Contact__social-btn"
-                    >
-                        🔗 GitHub
-                    </a>
-                    <a
-                        href="/resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="Contact__social-btn Contact__social-btn--accent"
-                    >
-                        📄 View Resume
-                    </a>
-                </div>
-
-                <p class="Contact__signoff">with love ♡</p>
             </div>
 
-            <div class="Contact__divider" aria-hidden="true"></div>
-
-            <!-- Right panel: contact form -->
             <div class="Contact__right">
-
-                <!-- Success state (hidden by default, shown via JS after submit) -->
                 <div class="Contact__success" id="contact-success" style="display: none;">
-                    <span class="Contact__success-icon">✈️</span>
                     <h3>Message sent!</h3>
-                    <p>Thanks for reaching out. I'll get back to you soon.</p>
-                    <button
-                        class="Contact__submit-btn"
-                        onclick="document.getElementById('contact-success').style.display='none'; document.getElementById('contact-form').style.display='';"
-                    >
-                        Send another ↩
-                    </button>
+                    <p>Thanks for reaching out.</p>
                 </div>
 
-                <!-- Contact form -->
-                <form
-                    id="contact-form"
-                    class="Contact__form"
-                    novalidate
-                    onsubmit="
-                        event.preventDefault();
-                        const btn = this.querySelector('.Contact__submit-btn');
-                        btn.textContent = 'Sending…';
-                        btn.classList.add('Contact__submit-btn--loading');
-                        btn.disabled = true;
-                        setTimeout(() => {
-                            this.style.display = 'none';
-                            document.getElementById('contact-success').style.display = '';
-                            btn.textContent = 'Send Message';
-                            btn.classList.remove('Contact__submit-btn--loading');
-                            btn.disabled = false;
-                            this.reset();
-                        }, 1500);
-                    "
-                >
+                <!-- BONUS REQUIREMENT: Contact Form -->
+                <form id="contact-form" class="Contact__form">
                     <div class="Contact__field">
                         <label class="Contact__label" for="contact-name">Name</label>
-                        <input
-                            id="contact-name"
-                            class="Contact__input"
-                            type="text"
-                            name="name"
-                            placeholder="Your name"
-                            required
-                            autocomplete="name"
-                        />
+                        <input id="contact-name" class="Contact__input" type="text" required />
                     </div>
-
                     <div class="Contact__field">
                         <label class="Contact__label" for="contact-email">Email</label>
-                        <input
-                            id="contact-email"
-                            class="Contact__input"
-                            type="email"
-                            name="email"
-                            placeholder="your@email.com"
-                            required
-                            autocomplete="email"
-                        />
+                        <input id="contact-email" class="Contact__input" type="email" required />
                     </div>
-
-                    <div class="Contact__field Contact__field--grow">
+                    <!-- BONUS REQUIREMENT: PH Phone Field -->
+                    <div class="Contact__field">
+                        <label class="Contact__label" for="contact-phone">Phone (PH Number)</label>
+                        <input id="contact-phone" class="Contact__input" type="tel" placeholder="09xxxxxxxxx" required />
+                    </div>
+                    <div class="Contact__field">
                         <label class="Contact__label" for="contact-message">Message</label>
-                        <textarea
-                            id="contact-message"
-                            class="Contact__input Contact__input--textarea"
-                            name="message"
-                            placeholder="What's on your mind?"
-                            rows="5"
-                            required
-                        ></textarea>
+                        <textarea id="contact-message" class="Contact__input" rows="4" required></textarea>
                     </div>
-
-                    <button type="submit" class="Contact__submit-btn">
-                        Send Message
-                    </button>
+                    <button type="submit" class="Contact__submit-btn">Send Message</button>
                 </form>
-
-            </div><!-- /.Contact__right -->
-
-        </div><!-- /.Contact__postcard -->
-    </div><!-- /.Contact__postcard-outer -->
-
-    <!-- Bottom Marquee -->
-    <div class="Contact__marquee-wrap Contact__marquee-wrap--bottom" aria-label="Scrolling banner">
-        <div class="Contact__marquee Contact__marquee--reverse">
-            <span>— LET'S WORK TOGETHER — OPEN TO OPPORTUNITIES — BACKEND · FULLSTACK · UI/UX — </span>
-            <span aria-hidden="true">— LET'S WORK TOGETHER — OPEN TO OPPORTUNITIES — BACKEND · FULLSTACK · UI/UX — </span>
+            </div>
         </div>
     </div>
+</section>
 
-</section><!-- /.Contact -->
-
-
-<!-- Minimal carousel JS (replaces useProjects hook logic) -->
-<script>
-    (function () {
-        const cards = Array.from(document.querySelectorAll('.proj-card'));
-        const dots  = Array.from(document.querySelectorAll('.proj-dot'));
-        let active  = 0;
-        const total = cards.length;
-
-        function getPos(idx) {
-            let pos = idx - active;
-            // Wrap around for circular feel
-            if (pos > Math.floor(total / 2))  pos -= total;
-            if (pos < -Math.floor(total / 2)) pos += total;
-            return pos;
-        }
-
-        function update() {
-            cards.forEach((card, i) => {
-                const pos = getPos(i);
-                card.className = 'proj-card';
-                card.style.setProperty('--pos', pos);
-                if (pos === 0)           { card.classList.add('proj-card--center');   card.tabIndex = 0;  card.removeAttribute('aria-hidden'); }
-                else if (Math.abs(pos) === 1) { card.classList.add('proj-card--adjacent', pos < 0 ? 'proj-card--left' : 'proj-card--right'); card.tabIndex = -1; card.removeAttribute('aria-hidden'); }
-                else                     { card.classList.add('proj-card--hidden',    pos < 0 ? 'proj-card--left' : 'proj-card--right'); card.tabIndex = -1; card.setAttribute('aria-hidden', 'true'); }
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('proj-dot--active', i === active);
-                dot.setAttribute('aria-selected', i === active);
-            });
-        }
-
-        window.rotateCarousel = function (dir) {
-            active = (active + dir + total) % total;
-            update();
-        };
-
-        window.goToProject = function (idx) {
-            active = idx;
-            update();
-        };
-
-        window.activateCard = function (el, pos) {
-            active = (active + pos + total) % total;
-            update();
-        };
-
-        // Click on center card links without triggering carousel
-        cards.forEach(card => {
-            card.addEventListener('click', function () {
-                const pos = parseInt(this.style.getPropertyValue('--pos'));
-                if (pos !== 0) {
-                    active = (cards.indexOf(this));
-                    update();
-                }
-            });
-        });
-
-        dots.forEach((dot, i) => dot.addEventListener('click', () => goToProject(i)));
-
-        update();
-    })();
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
